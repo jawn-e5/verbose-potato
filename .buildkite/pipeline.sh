@@ -9,5 +9,5 @@ echo "steps:"
 # add a new command step to run the tests in each test directory
 repos=$(curl -s -u \\$GH_USER:\\$GH_TOKEN https://api.github.com/orgs/highvolteej/repos | jq '.[].name')
 for repo in repos; do
-  echo "  - command: \"echo ${repo}"\""
+  echo "  - command: \"echo ${repo}\""
 done
