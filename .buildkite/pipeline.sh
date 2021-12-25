@@ -5,13 +5,14 @@ set -eu
 
 # begin the pipeline.yml file
 echo "steps:"
-echo "  - input: test
-          fields:
-            - select: stream
-              key: stream
-              options:
-                - label: beta
-                  value: beta"
+echo "  - input: Choose A org"
+echo "    key: 'orgcheck'"
+echo "    fields:"
+echo "      - select: 'org'"
+echo "        key: org"
+echo "        options:"
+echo "        - label: wee"
+echo "          value: wee"
 echo "  - wait"
 echo "  - input: Choose A Repository"
 echo "    key: 'check'"
