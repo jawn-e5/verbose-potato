@@ -20,6 +20,6 @@ for repo in $repos; do
   echo "          value: ${repo}"
 done
 
-repocheck=$(buildkite-agent meta-data get repocheck)
+repocheck=$(buildkite-agent meta-data get "repocheck")
 
 echo "  - command: \"echo "${repocheck}"\""
