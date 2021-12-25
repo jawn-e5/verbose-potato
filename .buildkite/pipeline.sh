@@ -8,7 +8,7 @@ echo "steps:"
 echo "  - input: Choose A Repository"
 echo "    fields:"
 echo "      - select: 'Repository'"
-echo "        key: repocheck"
+echo "        key: \"repocheck\""
 echo "        options:"
 
 # add a new command step to run the tests in each test directory
