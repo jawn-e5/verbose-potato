@@ -11,8 +11,7 @@ echo "  - input: test
               key: stream
               options:
                 - label: beta
-                  value: beta
-"
+                  value: beta"
 echo "  - wait"
 echo "  - input: Choose A Repository"
 echo "    key: 'check'"
