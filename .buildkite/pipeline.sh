@@ -8,7 +8,7 @@ echo "steps:"
 echo "  - input: Choose A Repository"
 echo "    fields:"
 echo "      - select: 'Repository'"
-echo "        key: 'repo'"
+echo "        key: 'repocheck'"
 echo "        options:"
 
 # add a new command step to run the tests in each test directory
@@ -19,3 +19,5 @@ for repo in $repos; do
   echo "        - label: ${repo}"
   echo "          value: ${repo}"
 done
+
+echo "  - command: \"echo "${repocheck}"\""
