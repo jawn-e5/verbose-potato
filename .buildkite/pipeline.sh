@@ -5,18 +5,13 @@ set -eu
 
 # begin the pipeline.yml file
 echo "steps:"
-echo "  - input: "Release details"
+echo "  - input: test
           fields:
-            - select: "Stream"
-              key: "release-stream"
-              hint: "Which release stream does this belong in? :fork:"
-              required: false
-              default: "beta"
+            - select: stream
+              key: stream
               options:
-                - label: "Beta"
-                  value: "beta"
-                - label: "Stable"
-                  value: "stable"
+                - label: beta
+                  value: beta
 "
 echo "  - wait"
 echo "  - input: Choose A Repository"
