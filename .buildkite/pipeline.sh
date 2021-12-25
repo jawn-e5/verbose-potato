@@ -7,7 +7,7 @@ set -eu
 echo "steps:"
 echo "  - input: Choose A Repository"
 echo "    fields:"
-echo "      - text: Repository"
+echo "      - select: Repository"
 echo "        key: repo"
 echo "        multiple: true"
 echo "        options:"
