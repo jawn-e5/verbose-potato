@@ -17,5 +17,5 @@ repos=$(curl -s -u $GH_USER:$GH_TOKEN https://api.github.com/orgs/highvolteej/re
 for repo in $repos; do
   repo=$( echo $repo | sed 's/\"//g')
   echo "        - label: ${repo}"
-  echo "          key: ${repo}"
+  echo "          value: ${repo}"
 done
