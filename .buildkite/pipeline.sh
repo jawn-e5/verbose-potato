@@ -21,5 +21,5 @@ for repo in $repos; do
 done
 
 repocheck=$(buildkite-agent meta-data get "repocheck")
-
+echo "  - wait"
 echo "  - command: \"echo "${repocheck}"\""
