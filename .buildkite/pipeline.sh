@@ -6,6 +6,7 @@ set -eu
 # begin the pipeline.yml file
 echo "steps:"
 echo "  - input: Choose A Repository"
+echo "    key: 'check'"
 echo "    fields:"
 echo "      - select: 'Repository'"
 echo "        key: \"repocheck\""
@@ -23,3 +24,4 @@ done
 repocheck=$(buildkite-agent meta-data get "repocheck")
 echo "  - wait"
 echo "  - command: \"echo "${repocheck}"\""
+echo "    depends_on: check"
