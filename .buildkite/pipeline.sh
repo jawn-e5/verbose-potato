@@ -22,4 +22,4 @@ for repo in $repos; do
 done
 
 echo "  - wait"
-echo "  - command: ./buildkite/script.sh"
+echo "  - command: buildkite/script.sh"
