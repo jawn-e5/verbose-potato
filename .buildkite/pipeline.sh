@@ -21,7 +21,5 @@ for repo in $repos; do
   echo "          value: ${repo}"
 done
 
-#repocheck=$(buildkite-agent meta-data get "repocheck")
-#echo "  - wait"
-#echo "  - command: \"echo "${repocheck}"\""
-#echo "    depends_on: check"
+echo "  - wait"
+echo "  - command: ./buildkite/script.sh"
