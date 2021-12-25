@@ -7,9 +7,8 @@ set -eu
 echo "steps:"
 echo "  - input: Choose A Repository"
 echo "    fields:"
-echo "      - select: Repository"
-echo "        key: repo"
-echo "        multiple: true"
+echo "      - select: 'Repository'"
+echo "        key: 'repo'"
 echo "        options:"
 
 # add a new command step to run the tests in each test directory
