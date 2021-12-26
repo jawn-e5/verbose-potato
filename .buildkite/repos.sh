@@ -4,26 +4,31 @@
 #set -eu
 
 SRC=$(buildkite-agent meta-data get srcorg)
-DEST=$(buildkiate-agent meta-data get destorg)
+DEST=$(buildkite-agent meta-data get destorg)
+
+if [ $SRC == $DEST ]; then
+	echo "Source and Desintation Organization Are Equal. Exiting."
+	exit 1
+fi
 
 # begin
 echo "steps:"
-#echo "  - input: Choose A Repository"
-#echo "    key: 'check'"
-#echo "    fields:"
-#echo "      - select: 'Repository'"
-#echo "        key: \"repocheck\""
-#echo "        options:"
+echo "  - input: Choose A Repository"
+echo "    key: 'check'"
+echo "    fields:"
+echo "      - select: 'Repository'"
+echo "        key: \"repocheck\""
+echo "        options:"
 
 # add a new command step to run the tests in each test directory
-#repos=$(curl -s -u $GH_USER:$GH_TOKEN https://api.github.com/orgs/highvolteej/repos | jq '.[].name')
+REPOS=$(curl -s -u $GH_USER:$GH_TOKEN https://api.github.com/orgs/${SRC}/repos | jq '.[].name')
 
-#for repo in $repos; do
-#  repo=$( echo $repo | sed 's/\"//g')
-#  echo "        - label: ${repo}"
-#  echo "          value: ${repo}"
+for repo in $REPOS; do
+  repo=$( echo $repo | sed 's/\"//g')
+  echo "        - label: ${repo}"
+  echo "          value: ${repo}"
 #done
 
-#echo "  - wait"
+echo "  - wait"
 #echo "  - command: .buildkite/script.sh"
 echo "  - command: \"echo "${SRC}"\"" 
