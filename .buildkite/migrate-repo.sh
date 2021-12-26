@@ -2,4 +2,7 @@
 
 RC=$(buildkite-agent meta-data get repocheck)
 
-echo ${RC}
+
+for i in $RC; do
+	echo "Repo: ${i}"
+done
