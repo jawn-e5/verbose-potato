@@ -37,4 +37,4 @@ echo "  - wait"
 
 RC=$(buildkite-agent meta-data get repocheck)
 
-echo "  - command: \"echo "${RC}"\"" 
+echo "  - command: .buildkite/script.sh" 
