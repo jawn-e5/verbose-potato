@@ -27,7 +27,7 @@ for repo in $REPOS; do
   repo=$( echo $repo | sed 's/\"//g')
   echo "        - label: ${repo}"
   echo "          value: ${repo}"
-#done
+done
 
 echo "  - wait"
 #echo "  - command: .buildkite/script.sh"
