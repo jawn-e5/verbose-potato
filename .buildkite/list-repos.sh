@@ -20,6 +20,7 @@ echo "    key: 'check'"
 echo "    fields:"
 echo "      - select: 'Repository'"
 echo "        key: \"repocheck\""
+echo "        multiple: true"
 echo "        options:"
 
 # add a new command step to run the tests in each test directory
