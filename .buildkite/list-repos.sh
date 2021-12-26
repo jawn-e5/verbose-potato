@@ -33,4 +33,4 @@ for repo in $REPOS; do
 done
 
 echo "  - wait"
-echo "  - command: .buildkite/script.sh" 
+echo "  - command: .buildkite/migrate-repo.sh" 
