@@ -6,12 +6,12 @@ set -eu
 SRC=$(buildkite-agent meta-data get srcorg)
 DEST=$(buildkite-agent meta-data get destorg)
 
-if [ $SRC == $DEST ]; then
+#if [ $SRC == $DEST ]; then
 #	echo "steps:"
 #	echo "  - command: \"echo 'Source and Destination Organization Are Equal. Exiting.\""
-	echo "Source and Destination Organization Are Equal. Exiting."
-	exit 1
-fi
+#	echo "Source and Destination Organization Are Equal. Exiting."
+#	exit 1
+#fi
 
 # begin
 echo "steps:"
@@ -33,4 +33,8 @@ done
 
 echo "  - wait"
 #echo "  - command: .buildkite/script.sh"
-echo "  - command: \"echo "${SRC}"\"" 
+
+
+RC=$(buildkite-agent meta-data get repocheck)
+
+echo "  - command: \"echo "${RC}"\"" 
