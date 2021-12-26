@@ -1,13 +1,15 @@
 #!/bin/bash
 
 # exit immediately on failure, or if an undefined variable is used
-#set -eu
+set -eu
 
 SRC=$(buildkite-agent meta-data get srcorg)
 DEST=$(buildkite-agent meta-data get destorg)
 
 if [ $SRC == $DEST ]; then
-	echo "Source and Desintation Organization Are Equal. Exiting."
+#	echo "steps:"
+#	echo "  - command: \"echo 'Source and Destination Organization Are Equal. Exiting.\""
+	echo "Source and Destination Organization Are Equal. Exiting."
 	exit 1
 fi
 
