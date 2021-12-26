@@ -32,9 +32,4 @@ for repo in $REPOS; do
 done
 
 echo "  - wait"
-#echo "  - command: .buildkite/script.sh"
-
-
-RC=$(buildkite-agent meta-data get repocheck)
-
 echo "  - command: .buildkite/script.sh" 

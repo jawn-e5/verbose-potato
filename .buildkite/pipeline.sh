@@ -43,5 +43,4 @@ echo "  - wait"
 #  echo "          value: ${repo}"
 #done
 
-echo "  - wait"
 echo "  - command: .buildkite/repos.sh | buildkite-agent pipeline upload"
